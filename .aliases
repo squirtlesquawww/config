@@ -17,12 +17,16 @@ alias gcfe="git checkout frontend"
 alias code="cd ~/code"
 alias jan="cd ~/code/jerrikneri"
 alias slive="cd ~/code/sendlane"
+alias la="ls -al"
 
 
 #Config
-alias refrash="source ~/.zshrc"
+alias refrash="zsrc && vsrc"
+alias zsrc="source ~/.zshrc"
+alias vsrc="source ~/.vimrc"
 alias cfg="cd ~/Config"
 alias zfig="vim ~/.zshrc"
+alias vfig="vim ~/.vimrc"
 
 
 #Keyboard
@@ -35,3 +39,11 @@ alias b-kb="qmk && build"
 #SSH
 alias sshme="ssh $JAN"
 alias slvpn="ssh jerrikneri@$SL_IP"
+
+
+#Laravel
+alias ci="composer install"
+alias cu="composer update"
+alias migrate-main="php artisan migrate --path=database/migrations/main"
+alias migrate-tenant="php artisan migrate:tenants --tenantdb=_user"
+alias route="php artisan route:list | grep "
