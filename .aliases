@@ -1,12 +1,30 @@
+#Git
 alias gs="git status"
 alias gl="git log"
-alias gcom="git checkout master"
 alias gpom="git pull origin master"
 alias gaa="git add ."
 alias gc="git commit -m"
-alias gp="git push"
+alias gps="git push"
+alias gpl="git pull"
+alias gd="git diff"
+alias gf="git fetch"
+#Sendlane-Git
+alias gcom="git checkout master"
+alias gcfe="git checkout frontend"
+
+#Directories
 alias code="cd ~/code"
 alias jan="cd ~/code/jerrikneri"
-alias zconfig="vim ~/.zshrc"
 alias slive="cd ~/code/sendlane"
+
+
+#Config
 alias refrash="source ~/.zshrc"
+alias cfg="cd ~/Config"
+alias zfig="vim ~/.zshrc"
+
+#Keyboard
+alias kb="cd /Users/jan/Keyboard/QMK/keyboards/planck/keymaps/planck-grid-JERRIK"
+alias qmk="cd /Users/jan/Keyboard/QMK"
+alias build="make planck/rev3:planck-grid-JERRIK:dfu"
+alias b-kb="qmk && build"
