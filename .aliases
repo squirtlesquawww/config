@@ -2,8 +2,10 @@
 alias gs="git status"
 alias gl="git log"
 alias gpom="git pull origin master"
+alias ga="git add"
 alias gaa="git add ."
 alias gc="git commit -m"
+alias gco="git checkout"
 alias gps="git push"
 alias gpl="git pull"
 alias gd="git diff"
@@ -16,7 +18,8 @@ alias gcfe="git checkout frontend"
 #Directories
 alias code="cd ~/code"
 alias jan="cd ~/code/jerrikneri"
-alias slive="cd ~/code/sendlane"
+alias sl="cd ~/code/sendlane"
+alias slive="cd ~/code/sendlane/sendlane"
 alias la="ls -al"
 
 
@@ -30,10 +33,16 @@ alias vfig="vim ~/.vimrc"
 
 
 #Keyboard
-alias kb="cd /Users/jan/Keyboard/QMK/keyboards/planck/keymaps/planck-grid-JERRIK"
-alias qmk="cd /Users/jan/Keyboard/QMK"
-alias build="make planck/rev3:planck-grid-JERRIK:dfu"
-alias b-kb="qmk && build"
+alias planck="cd ~/Keyboard/QMK/keyboards/planck/keymaps/planck-grid-JERRIK"
+alias nyquist="cd ~/Keyboard/QMK/keyboards/nyquist/keymaps/nyquist-grid-JERRIK"
+alias letssplit="cd ~/Keyboard/QMK/keyboards/lets_split/keymaps/letssplit-grid-JERRIK"
+alias qmk="cd ~/Keyboard/QMK"
+alias build-p="make planck/rev3:planck-grid-JERRIK:dfu"
+alias build-n="make nyquist/rev2:nyquist-grid-JERRIK:dfu"
+alias build-l="make lets_split/rev2:letssplit-grid-JERRIK:dfu"
+alias planck-build="qmk && build-p"
+alias nyquist-build="qmk && build-n"
+alias letssplit-build="qmk && build-l"
 
 
 #SSH
