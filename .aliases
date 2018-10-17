@@ -12,6 +12,7 @@ alias gf="git fetch"
 alias gcom="git checkout master"
 alias gcfe="git checkout frontend"
 
+
 #Directories
 alias code="cd ~/code"
 alias jan="cd ~/code/jerrikneri"
@@ -23,8 +24,14 @@ alias refrash="source ~/.zshrc"
 alias cfg="cd ~/Config"
 alias zfig="vim ~/.zshrc"
 
+
 #Keyboard
 alias kb="cd /Users/jan/Keyboard/QMK/keyboards/planck/keymaps/planck-grid-JERRIK"
 alias qmk="cd /Users/jan/Keyboard/QMK"
 alias build="make planck/rev3:planck-grid-JERRIK:dfu"
 alias b-kb="qmk && build"
+
+
+#SSH
+alias sshme="ssh $JAN"
+alias slvpn="ssh jerrikneri@$SL_IP"
