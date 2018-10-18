@@ -54,5 +54,13 @@ alias slvpn="ssh jerrikneri@$SL_IP"
 alias ci="composer install"
 alias cu="composer update"
 alias migrate-main="php artisan migrate --path=database/migrations/main"
-alias migrate-tenant="php artisan migrate:tenants --tenantdb=_user"
 alias route="php artisan route:list | grep "
+function migrate-tenant(){
+  if [ -z "$1" ]
+  then
+    echo "Tenant DB name required."
+  else
+    php artisan migrate:tenants --tenantdb=$1
+  fi
+}
+
