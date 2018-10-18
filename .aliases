@@ -38,7 +38,7 @@ alias vfig="vim ~/.vimrc"
 #Keyboard
 alias qmk="cd ~/Keyboard/QMK"
 function build() {
-	 qmk && make $1/rev2:$1-grid-JERRIK:dfu
+	 qmk && make $1/$2:$1-grid-JERRIK:dfu
 }
 function kb() {
 	 cd ~/Keyboard/QMK/keyboards/$1/keymaps/$1-grid-JERRIK
