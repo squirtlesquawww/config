@@ -33,16 +33,13 @@ alias vfig="vim ~/.vimrc"
 
 
 #Keyboard
-alias planck="cd ~/Keyboard/QMK/keyboards/planck/keymaps/planck-grid-JERRIK"
-alias nyquist="cd ~/Keyboard/QMK/keyboards/nyquist/keymaps/nyquist-grid-JERRIK"
-alias letssplit="cd ~/Keyboard/QMK/keyboards/lets_split/keymaps/letssplit-grid-JERRIK"
 alias qmk="cd ~/Keyboard/QMK"
-alias build-p="make planck/rev3:planck-grid-JERRIK:dfu"
-alias build-n="make nyquist/rev2:nyquist-grid-JERRIK:dfu"
-alias build-l="make lets_split/rev2:letssplit-grid-JERRIK:dfu"
-alias planck-build="qmk && build-p"
-alias nyquist-build="qmk && build-n"
-alias letssplit-build="qmk && build-l"
+function build() {
+	qmk && make $1/rev2:$1-grid-JERRIK:dfu
+}
+function kb() {
+	cd ~/Keyboard/QMK/keyboards/$1/keymaps/$1-grid-JERRIK
+}
 
 
 #SSH
