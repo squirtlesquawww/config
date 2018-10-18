@@ -18,9 +18,11 @@ alias gcfe="git checkout frontend"
 #Directories
 alias code="cd ~/code"
 alias jan="cd ~/code/jerrikneri"
-alias sl="cd ~/code/sendlane"
 alias slive="cd ~/code/sendlane/sendlane"
 alias la="ls -al"
+function sl(){
+	 cd ~/code/sendlane/$1
+}
 
 
 #Config
@@ -35,10 +37,10 @@ alias vfig="vim ~/.vimrc"
 #Keyboard
 alias qmk="cd ~/Keyboard/QMK"
 function build() {
-	qmk && make $1/rev2:$1-grid-JERRIK:dfu
+	 qmk && make $1/rev2:$1-grid-JERRIK:dfu
 }
 function kb() {
-	cd ~/Keyboard/QMK/keyboards/$1/keymaps/$1-grid-JERRIK
+	 cd ~/Keyboard/QMK/keyboards/$1/keymaps/$1-grid-JERRIK
 }
 
 
