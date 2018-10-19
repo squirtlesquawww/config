@@ -9,10 +9,6 @@ alias gps="git push"
 alias gpl="git pull"
 alias gd="git diff"
 alias gf="git fetch"
-#Sendlane-Git
-alias gcom="git checkout master"
-alias gcfe="git checkout frontend"
-
 function gco() { git checkout $1 }
 
 
