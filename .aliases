@@ -1,3 +1,8 @@
+#Stress Test
+alias stress="yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null &"
+alias stop="killall yes"
+
+
 #Git
 alias gs="git status"
 alias gl="git log"
