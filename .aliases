@@ -24,6 +24,9 @@ function js() {
   npm run $1
 }
 
+#Jekyll
+alias jserve="bundle exec jekyll serve"
+
 #Directories
 alias code="cd ~/code"
 alias jan="cd ~/code/jerrikneri"
