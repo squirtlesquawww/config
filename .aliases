@@ -20,6 +20,7 @@ function gco() { git checkout $1 }
 alias js-reset="rm -rf node_modules/ && npm i && npm run hot:ops"
 alias js-hot="npm run hot:ops"
 alias js-watch="npm run watch"
+alias npm-login="npm set registry https://npm.cwserve.com && npm login --registry https://npm.cwserve.com/"
 function js() {
   npm run $1
 }
@@ -76,6 +77,13 @@ function migrate-tenant(){
     echo "Tenant DB name required."
   else
     php artisan migrate:tenants --tenantdb=$1
+  fi
+}
+function pu(){
+  if [ $1 = "-f" ]; then
+    phpunit --filter $2
+  else 
+    phpunit
   fi
 }
 
