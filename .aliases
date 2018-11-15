@@ -80,10 +80,11 @@ function migrate-tenant(){
   fi
 }
 function pu(){
-  if [ $1 = "-f" ]; then
-    phpunit --filter $2
-  else 
+  if [ -z "$1" ]
+  then
     phpunit
+  else
+    phpunit --filter $1
   fi
 }
 
