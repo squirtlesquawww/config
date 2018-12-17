@@ -67,6 +67,7 @@ alias slvpn="ssh jerrikneri@$SL_IP"
 
 
 #Laravel
+alias art="php artisan"
 alias ci="composer install"
 alias cu="composer update"
 alias migrate-main="php artisan migrate --path=database/migrations/main"
