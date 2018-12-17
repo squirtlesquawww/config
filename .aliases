@@ -71,6 +71,7 @@ alias ci="composer install"
 alias cu="composer update"
 alias migrate-main="php artisan migrate --path=database/migrations/main"
 alias route="php artisan route:list | grep "
+alias tinker="php artisan tinker"
 function migrate-tenant(){
   if [ -z "$1" ]
   then
