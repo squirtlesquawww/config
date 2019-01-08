@@ -17,12 +17,15 @@ alias gf="git fetch"
 function gco() { git checkout $1 }
 
 #Javscript Build
-alias js-reset="rm -rf node_modules/ && npm i && npm run hot:ops"
+alias js-reset="rm -rf node_modules/ && npm i && js dev && js hot:ops"
 alias js-hot="npm run hot:ops"
 alias js-watch="npm run watch"
-alias npm-login="npm set registry https://npm.cwserve.com && npm login --registry https://npm.cwserve.com/"
 function js() {
   npm run $1
+}
+
+function rs-all() {
+  cu && ci && rm -rf node_modules/ && npm i && js dev && js $1
 }
 
 #Jekyll
