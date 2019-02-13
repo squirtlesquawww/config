@@ -24,9 +24,6 @@ function js() {
   npm run $1
 }
 
-function rs-all() {
-  cu && ci && rm -rf node_modules/ && npm i && js dev && js $1
-}
 
 #Jekyll
 alias jserve="bundle exec jekyll serve"
@@ -35,6 +32,8 @@ alias jserve="bundle exec jekyll serve"
 alias code="cd ~/code"
 alias jan="cd ~/code/jerrikneri"
 alias slive="cd ~/code/sendlane/sendlane"
+alias demo="cd ~/code/sendlane/lp"
+alias meet="cd ~/code/sendlane/meeting"
 alias la="ls -al"
 function sl(){
 	 cd ~/code/sendlane/$1
@@ -73,6 +72,7 @@ alias slvpn="ssh jerrikneri@$SL_IP"
 alias art="php artisan"
 alias ci="composer install"
 alias cu="composer update"
+alias cda="composer dumpautoload"
 alias migrate-main="php artisan migrate --path=database/migrations/main"
 alias route="php artisan route:list | grep "
 alias tinker="php artisan tinker"
@@ -92,4 +92,10 @@ function pu(){
     phpunit --filter $1
   fi
 }
+
+
+# Functions with dependencies
+jsbrs() {
+  ci && cu && rm -rf node_modules/ && npm i && js dev && js $1
+ }
 
