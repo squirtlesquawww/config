@@ -20,11 +20,11 @@ function gco() { git checkout $1 }
 alias js-reset="rm -rf node_modules/ && npm i && js dev && js hot:ops"
 alias js-hot="npm run hot:ops"
 alias js-watch="npm run watch"
-alias iw="npm i && npm run watch"
 function js() {
   npm run $1
 }
-
+alias iw="npm i && js watch"
+alias tw="js test:watch"
 
 #Jekyll
 alias jserve="bundle exec jekyll serve"
