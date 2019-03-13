@@ -99,4 +99,6 @@ function pu(){
 jsbrs() {
   ci && cu && rm -rf node_modules/ && npm i && js dev && js $1
  }
-
+m-sl() {
+  migrate-main && DB_DATABASE=test migrate-main && migrate-tenant _user && migrate-tenant test_user
+ }
