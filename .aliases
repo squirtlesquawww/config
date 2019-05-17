@@ -30,7 +30,7 @@ alias tw="js test:watch"
 alias jserve="bundle exec jekyll serve"
 
 #Directories
-alias code="cd ~/code"
+alias c="cd ~/code"
 alias jan="cd ~/code/jerrikneri"
 alias slive="cd ~/code/sendlane/sendlane"
 alias demo="cd ~/code/sendlane/lp"
