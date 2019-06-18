@@ -67,7 +67,7 @@ function kb() {
 #SSH
 alias sshme="ssh $JAN"
 alias slvpn="ssh jerrikneri@$SL_IP"
-
+alias sshsldev="ssh sendlane@$SL_DEV"
 
 #Laravel
 alias art="php artisan"
