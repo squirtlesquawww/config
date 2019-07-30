@@ -102,3 +102,6 @@ jsbrs() {
 m-sl() {
   migrate-main && DB_DATABASE=test migrate-main && migrate-tenant _user && migrate-tenant test_user
  }
+ca() {
+  art cache:clear && art config:clear && cda
+ }
