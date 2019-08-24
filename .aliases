@@ -23,7 +23,6 @@ alias js-watch="npm run watch"
 function js() {
   npm run $1
 }
-alias iw="npm i && js watch"
 alias tw="js test:watch"
 
 #Jekyll
@@ -95,6 +94,8 @@ function pu(){
   fi
 }
 
+# Docker
+alias docker-format="docker ps --format $FORMAT"
 
 # Functions with dependencies
 jsbrs() {
@@ -106,3 +107,11 @@ m-sl() {
 ca() {
   art cache:clear && art config:clear && cda
  }
+iw(){
+  if [ -z "$1" ]
+  then
+    npm i && npm run watch
+  else
+    npm i && build=$1 npm run watch
+  fi
+}
