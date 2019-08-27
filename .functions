@@ -1,0 +1,64 @@
+#Directories
+function sl(){
+	 cd ~/code/sendlane/$1
+}
+
+#Git
+function gco() { git checkout $1 }
+
+#Javascript Build
+function js() {
+  npm run $1
+}
+iw(){
+  if [ -z "$1" ]
+  then
+    npm i && npm run watch
+  else
+    npm i && build=$1 npm run watch
+  fi
+}
+id(){
+  if [ -z "$1" ]
+  then
+    npm i && npm run dev
+  else
+    npm i && build=$1 npm run dev
+  fi
+}
+
+#Keyboard
+function build() {
+	 qmk && make $1/$2:$1-grid-JERRIK:dfu
+}
+function kb() {
+   if [ $1 = "hhkb" ]; then
+    qmk && cd keyboards/$1/keymaps/$1-JERRIK
+   else
+	  cd ~/Keyboard/QMK/keyboards/$1/keymaps/$1-grid-JERRIK
+   fi
+}
+
+#Laravel
+ca() {
+  art cache:clear && art config:clear && cda
+ }
+function migrate-tenant(){
+  if [ -z "$1" ]
+  then
+    echo "Tenant DB name required."
+  else
+    php artisan migrate:tenants --tenantdb=$1
+  fi
+}
+m-sl() {
+  migrate-main && DB_DATABASE=test migrate-main && migrate-tenant _user && migrate-tenant test_user
+}
+function pu(){
+  if [ -z "$1" ]
+  then
+    phpunit
+  else
+    phpunit --filter $1
+  fi
+}

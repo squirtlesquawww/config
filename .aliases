@@ -14,15 +14,11 @@ alias gps="git push"
 alias gpl="git pull"
 alias gd="git diff"
 alias gf="git fetch"
-function gco() { git checkout $1 }
 
 #Javscript Build
 alias js-reset="rm -rf node_modules/ && npm i && js dev && js hot:ops"
 alias js-hot="npm run hot:ops"
 alias js-watch="npm run watch"
-function js() {
-  npm run $1
-}
 alias tw="js test:watch"
 
 #Jekyll
@@ -35,9 +31,7 @@ alias slive="cd ~/code/sendlane/sendlane"
 alias demo="cd ~/code/sendlane/lp"
 alias meet="cd ~/code/sendlane/meeting"
 alias la="ls -al"
-function sl(){
-	 cd ~/code/sendlane/$1
-}
+
 
 
 #Config
@@ -51,16 +45,7 @@ alias vfig="vim ~/.vimrc"
 
 #Keyboard
 alias qmk="cd ~/Keyboard/QMK"
-function build() {
-	 qmk && make $1/$2:$1-grid-JERRIK:dfu
-}
-function kb() {
-   if [ $1 = "hhkb" ]; then
-    qmk && cd keyboards/$1/keymaps/$1-JERRIK
-   else
-	  cd ~/Keyboard/QMK/keyboards/$1/keymaps/$1-grid-JERRIK
-   fi
-}
+
 
 
 #SSH
@@ -77,41 +62,9 @@ alias cda="composer dumpautoload"
 alias migrate-main="php artisan migrate --path=database/migrations/main"
 alias route="php artisan route:list | grep "
 alias tinker="php artisan tinker"
-function migrate-tenant(){
-  if [ -z "$1" ]
-  then
-    echo "Tenant DB name required."
-  else
-    php artisan migrate:tenants --tenantdb=$1
-  fi
-}
-function pu(){
-  if [ -z "$1" ]
-  then
-    phpunit
-  else
-    phpunit --filter $1
-  fi
-}
 
 # Docker
 alias docker-format="docker ps --format $FORMAT"
 
-# Functions with dependencies
-jsbrs() {
-  ci && cu && rm -rf node_modules/ && npm i && js dev && js $1
- }
-m-sl() {
-  migrate-main && DB_DATABASE=test migrate-main && migrate-tenant _user && migrate-tenant test_user
- }
-ca() {
-  art cache:clear && art config:clear && cda
- }
-iw(){
-  if [ -z "$1" ]
-  then
-    npm i && npm run watch
-  else
-    npm i && build=$1 npm run watch
-  fi
-}
+
+

@@ -1,3 +1,4 @@
 source ~/Config/.env
 source ~/Config/.aliases
+source ~/Config/.functions
 source ~/Config/.format
