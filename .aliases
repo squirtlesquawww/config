@@ -53,6 +53,7 @@ alias sshme="ssh $JAN"
 alias slvpn="ssh jerrikneri@$SL_IP"
 alias sldev="ssh sendlane@$SL_DEV"
 alias slprod="ssh targetly@$SL_PROD"
+alias slecom="ssh ecom@$SL_ECOM"
 
 #Laravel
 alias art="php artisan"
