@@ -14,6 +14,7 @@ alias gps="git push"
 alias gpl="git pull"
 alias gd="git diff"
 alias gf="git fetch"
+alias gclb="git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done"
 
 #Javscript Build
 alias js-reset="rm -rf node_modules/ && npm i && js dev && js hot:ops"
@@ -54,6 +55,7 @@ alias slvpn="ssh jerrikneri@$SL_IP"
 alias sldev="ssh sendlane@$SL_DEV"
 alias slprod="ssh targetly@$SL_PROD"
 alias slecom="ssh ecom@$SL_ECOM"
+alias sltrack="ssh targetly@$SL_TRACK"
 
 #Laravel
 alias art="php artisan"
@@ -63,6 +65,9 @@ alias cda="composer dumpautoload"
 alias migrate-main="php artisan migrate --path=database/migrations/main"
 alias route="php artisan route:list | grep "
 alias tinker="php artisan tinker"
+
+#PHPUnit
+alias pucc="phpunit --coverage-html ./public/coverage"
 
 # Docker
 alias docker-format="docker ps --format $FORMAT"
