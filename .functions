@@ -62,3 +62,14 @@ function pu(){
     phpunit --filter $1
   fi
 }
+
+#SSH
+sshslj(){
+  if [ -z "$1" ]
+  then
+    ssh $SLJUMP
+  else
+    ssh -At $SLJUMP "ssh -At $1"
+  fi
+}
+

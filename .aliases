@@ -29,8 +29,7 @@ alias jserve="bundle exec jekyll serve"
 alias c="cd ~/code"
 alias jan="cd ~/code/jerrikneri"
 alias slive="cd ~/code/sendlane/sendlane"
-alias demo="cd ~/code/sendlane/lp"
-alias meet="cd ~/code/sendlane/meeting"
+alias secom="cd ~/code/sendlane/sendlane-ecom"
 alias la="ls -al"
 
 
@@ -56,6 +55,7 @@ alias sldev="ssh sendlane@$SL_DEV"
 alias slprod="ssh targetly@$SL_PROD"
 alias slecom="ssh ecom@$SL_ECOM"
 alias sltrack="ssh targetly@$SL_TRACK"
+alias sljump="ssh jump@jump.sendlane.io"
 
 #Laravel
 alias art="php artisan"
@@ -69,8 +69,11 @@ alias tinker="php artisan tinker"
 #PHPUnit
 alias pucc="phpunit --coverage-html ./public/coverage"
 
-# Docker
+#Docker
 alias docker-format="docker ps --format $FORMAT"
 
 
-
+#Supervisor
+alias supervisor-path="/Users/jerrikneri/code/supervisor/supervisord.conf"
+alias svd="supervisord -c /usr/local/etc/supervisor.d/supervisord.conf"
+alias svc="supervisorctl -c /usr/local/etc/supervisor.d/supervisord.conf"
