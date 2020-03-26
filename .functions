@@ -52,7 +52,7 @@ function migrate-tenant(){
   fi
 }
 m-sl() {
-  migrate-main && DB_DATABASE=test migrate-main && art migrate:tenants && migrate-deliverability
+  migrate-main && migrate-test && art migrate:tenants && migrate-deliverability
 }
 function pu(){
   if [ -z "$1" ]
