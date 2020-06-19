@@ -31,6 +31,7 @@ alias jan="cd ~/code/jerrikneri"
 alias slive="cd ~/code/sendlane/sendlane"
 alias secom="cd ~/code/sendlane/sendlane-ecom"
 alias la="ls -al"
+alias sb-j="cd ~/code/sandbox/jeopardy"
 
 
 
