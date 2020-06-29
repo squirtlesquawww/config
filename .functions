@@ -9,7 +9,7 @@ dit() {
 }
 
 #Git
-gco() {
+gco () {
   git checkout $1
 }
 

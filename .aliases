@@ -39,10 +39,10 @@ alias jeopardy="sb-j && npm run serve"
 #Config
 alias refrash="zsrc && vsrc"
 alias zsrc="source ~/.zshrc"
-alias vsrc="source ~/.vimrc"
+alias vsrc="source ~/Config/.vimrc"
 alias cfg="cd ~/Config"
-alias zfig="vim ~/.zshrc"
-alias vfig="vim ~/.vimrc"
+alias zfg="vim ~/.zshrc"
+alias vfg="vim ~/Config/.vimrc"
 
 
 #Keyboard
