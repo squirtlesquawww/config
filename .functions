@@ -1,16 +1,23 @@
 #Directories
-function sl(){
-	 cd ~/code/sendlane/$1
+sl() {
+	cd ~/code/sendlane/$1
+}
+
+#Docker
+dit() {
+  docker exec -it $1 bash
 }
 
 #Git
-function gco() { git checkout $1 }
+gco() {
+  git checkout $1
+}
 
 #Javascript Build
-function js() {
+js() {
   npm run $1
 }
-iw(){
+iw() {
   if [ -z "$1" ]
   then
     npm i && npm run watch
@@ -18,7 +25,7 @@ iw(){
     npm i && build=$1 npm run watch
   fi
 }
-id(){
+id() {
   if [ -z "$1" ]
   then
     npm i && npm run dev
@@ -28,10 +35,10 @@ id(){
 }
 
 #Keyboard
-function build() {
+build() {
 	 qmk && make $1/$2:$1-grid-JERRIK:dfu
 }
-function kb() {
+kb() {
    if [ $1 = "hhkb" ]; then
     qmk && cd keyboards/$1/keymaps/$1-JERRIK
    else
@@ -43,7 +50,7 @@ function kb() {
 ca() {
   art cache:clear && art config:clear && cda
  }
-function migrate-tenant(){
+migrate-tenant() {
   if [ -z "$1" ]
   then
     echo "Tenant DB name required."
@@ -54,7 +61,7 @@ function migrate-tenant(){
 m-sl() {
   migrate-main && migrate-test && art migrate:tenants && migrate-deliverability
 }
-function pu(){
+pu() {
   if [ -z "$1" ]
   then
     phpunit
@@ -64,7 +71,7 @@ function pu(){
 }
 
 #SSH
-sshslj(){
+sshslj() {
   if [ -z "$1" ]
   then
     ssh $SLJUMP
