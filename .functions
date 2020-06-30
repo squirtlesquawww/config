@@ -9,7 +9,7 @@ dit() {
 }
 
 #Git
-gco () {
+gcho() {
   git checkout $1
 }
 
@@ -17,6 +17,7 @@ gco () {
 js() {
   npm run $1
 }
+
 iw() {
   if [ -z "$1" ]
   then
@@ -25,6 +26,7 @@ iw() {
     npm i && build=$1 npm run watch
   fi
 }
+
 id() {
   if [ -z "$1" ]
   then

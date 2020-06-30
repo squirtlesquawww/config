@@ -1,4 +1,5 @@
 :imap jj <Esc>
+
 set number
 
 set nocompatible
