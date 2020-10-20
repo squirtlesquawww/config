@@ -33,7 +33,7 @@ alias secom="cd ~/code/sendlane/sendlane-ecom"
 alias la="ls -al"
 alias sb-j="cd ~/code/sandbox/jeopardy"
 alias jeopardy="sb-j && npm run serve"
-
+alias fpweb="cd ~/code/fashionphile/fashionphile"
 
 
 #Config
