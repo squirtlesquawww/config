@@ -27,13 +27,18 @@ alias jserve="bundle exec jekyll serve"
 
 #Directories
 alias c="cd ~/code"
-alias jan="cd ~/code/jerrikneri"
-alias slive="cd ~/code/sendlane/sendlane"
-alias secom="cd ~/code/sendlane/sendlane-ecom"
 alias la="ls -al"
+
+alias jan="cd ~/code/jerrikneri"
+
 alias sb-j="cd ~/code/sandbox/jeopardy"
 alias jeopardy="sb-j && npm run serve"
+
+alias slive="cd ~/code/sendlane/sendlane"
+alias secom="cd ~/code/sendlane/sendlane-ecom"
+
 alias fpweb="cd ~/code/fashionphile/fashionphile"
+alias fpca="cd ~/code/fashionphile/core-api"
 
 
 #Config
