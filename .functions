@@ -52,6 +52,7 @@ kb() {
 ca() {
   art cache:clear && art config:clear && cda
  }
+
 migrate-tenant() {
   if [ -z "$1" ]
   then
@@ -60,9 +61,11 @@ migrate-tenant() {
     php artisan migrate:tenants --tenantdb=$1
   fi
 }
+
 m-sl() {
   migrate-main && migrate-test && art migrate:tenants && migrate-deliverability
 }
+
 pu() {
   if [ -z "$1" ]
   then
@@ -71,6 +74,16 @@ pu() {
     phpunit --filter $1
   fi
 }
+
+pud() {
+  if [ -z "$1" ]
+  then
+    bash ./jenkins_test.sh vendor/bin/codecept run tests/unit/Fashionphile/Admin --fail-fast
+  else
+    bash ./jenkins_test.sh vendor/bin/codecept run tests/unit/Fashionphile/$1 --fail-fast
+  fi
+}
+
 
 #SSH
 sshslj() {

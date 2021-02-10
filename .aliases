@@ -7,9 +7,10 @@ alias stop="killall yes"
 alias gs="git status"
 alias gl="git log"
 alias gpom="git pull origin main"
+alias gpoms="git pull origin master"
 alias ga="git add"
 alias gaa="git add ."
-alias gc="git commit -m"
+alias gc="git commit -S -m"
 alias gps="git push"
 alias gpl="git pull"
 alias gd="git diff"
@@ -21,6 +22,9 @@ alias js-reset="rm -rf node_modules/ && npm i && js dev && js hot:ops"
 alias js-hot="npm run hot:ops"
 alias js-watch="npm run watch"
 alias tw="js test:watch"
+
+alias is="npm i && npm run serve"
+alias webwatch="nvm use 10.8.0 && iw"
 
 #Jekyll
 alias jserve="bundle exec jekyll serve"
@@ -39,6 +43,7 @@ alias secom="cd ~/code/sendlane/sendlane-ecom"
 
 alias fpweb="cd ~/code/fashionphile/fashionphile"
 alias fpca="cd ~/code/fashionphile/core-api"
+alias fpvue="cd ~/code/fashionphile/admin-frontend"
 
 
 #Config
@@ -72,8 +77,10 @@ alias cda="composer dumpautoload"
 alias migrate-main="php artisan migrate --path=database/migrations/main"
 alias migrate-test="DB_DATABASE=test migrate-main"
 alias migrate-deliverability="php artisan migrate --database=deliverability --path=database/migrations/deliverability"
-alias route="php artisan route:list | grep "
+alias route="php artisan route:list | grep -i"
 alias tinker="php artisan tinker"
+alias staging="php artisan staging-hosts:api list"
+
 
 #PHPUnit
 alias pucc="phpunit --coverage-html ./public/coverage"
