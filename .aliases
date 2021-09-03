@@ -42,8 +42,10 @@ alias slive="cd ~/code/sendlane/sendlane"
 alias secom="cd ~/code/sendlane/sendlane-ecom"
 
 alias fpweb="cd ~/code/fashionphile/fashionphile"
-alias fpca="cd ~/code/fashionphile/core-api"
-alias fpvue="cd ~/code/fashionphile/admin-frontend"
+alias fpcore="cd ~/code/fashionphile/core-api"
+alias fpfe="cd ~/code/fashionphile/admin-frontend"
+alias fpnm="cd ~/code/fashionphile/nm-portal"
+alias fpsty="cd ~/code/fashionphile/stylist"
 
 
 #Config
