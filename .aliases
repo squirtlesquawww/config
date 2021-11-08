@@ -74,6 +74,8 @@ alias migrate-test="DB_DATABASE=test migrate-main"
 alias migrate-deliverability="php artisan migrate --database=deliverability --path=database/migrations/deliverability"
 alias route="php artisan route:list | grep "
 alias tinker="php artisan tinker"
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+
 
 #PHPUnit
 alias pucc="phpunit --coverage-html ./public/coverage"
