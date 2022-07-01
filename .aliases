@@ -32,8 +32,7 @@ alias la="ls -al"
 alias jan="cd ~/code/jerrikneri"
 
 alias sb-j="cd ~/code/sandbox/jeopardy"
-alias sb-j-fe="sb-j && cd frontend && npm i && npm
-run serve"
+alias sb-j-fe="sb-j && cd frontend && npm i && npm run serve"
 alias sb-j-api="sb-j && cd api && DEBUG=myapp:* npm start"
 alias jeopardy="sb-j && npm run serve"
 
