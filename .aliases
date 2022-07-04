@@ -46,7 +46,7 @@ alias fpca="cd ~/code/fashionphile/core-api"
 #Config
 alias refrash="zsrc && vsrc"
 alias zsrc="source ~/.zshrc"
-alias vsrc="source ~/Config/.vimrc"
+alias vsrc="cp ~/Config/.vimrc ~/.vimrc"
 alias cfg="cd ~/Config"
 alias zfg="vim ~/.zshrc"
 alias vfg="vim ~/Config/.vimrc"
@@ -59,12 +59,6 @@ alias qmk="cd ~/Keyboard/QMK"
 
 #SSH
 alias sshme="ssh $JAN"
-alias slvpn="ssh jerrikneri@$SL_IP"
-alias sldev="ssh sendlane@$SL_DEV"
-alias slprod="ssh targetly@$SL_PROD"
-alias slecom="ssh ecom@$SL_ECOM"
-alias sltrack="ssh targetly@$SL_TRACK"
-alias sljump="ssh jump@jump.sendlane.io"
 
 #Laravel
 alias art="php artisan"
@@ -73,7 +67,6 @@ alias cu="composer update"
 alias cda="composer dumpautoload"
 alias migrate-main="php artisan migrate --path=database/migrations/main"
 alias migrate-test="DB_DATABASE=test migrate-main"
-alias migrate-deliverability="php artisan migrate --database=deliverability --path=database/migrations/deliverability"
 alias route="php artisan route:list | grep "
 alias tinker="php artisan tinker"
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
@@ -97,4 +90,3 @@ alias h-check="ping $HOME_SERVER_IP"
 alias h-luks="ssh -o \"HostKeyAlgorithms ssh-rsa\" -p $HOME_SERVER_PORT root@$HOME_SERVER_IP"
 alias h-ssh="ssh jerrik@$HOME_SERVER_IP -p $HOME_SERVER_SSH_PORT"
 alias h-wake="wakeonlan -i 192.168.1.255 -p 7 $HOME_SERVER_MAC"
-
