@@ -4,3 +4,6 @@ defaults write com.apple.dock autohide-delay -float 0; defaults write com.apple.
 
 Screen Capture Image Type
 defaults write com.apple.screencapture type jpg
+
+Make Icons in Dock Transparent when "Hidden"
+defaults write com.apple.DOCK showhidden -bool TRUE && killall Dock
