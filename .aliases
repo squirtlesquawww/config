@@ -18,7 +18,8 @@ alias gd="git diff"
 alias gf="git fetch"
 alias gclb="git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done"
 
-#Javscript Build
+#Javascript Build
+alias is="npm i && npm run serve"
 alias js-reset="rm -rf node_modules/ && npm i && js dev && js hot:ops"
 alias js-hot="npm run hot:ops"
 alias js-watch="npm run watch"
@@ -34,7 +35,7 @@ alias la="ls -al"
 alias jan="cd ~/code/jerrikneri"
 
 alias sb-j="cd ~/code/sandbox/jeopardy"
-alias sb-j-fe="sb-j && cd frontend && npm i && npm run serve"
+alias sb-j-fe="sb-j && cd frontend && is"
 alias sb-j-api="sb-j && cd api && DEBUG=myapp:* npm start"
 alias jeopardy="sb-j && npm run serve"
 
