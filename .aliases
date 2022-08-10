@@ -18,14 +18,11 @@ alias gf="git fetch"
 alias gclb="git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done"
 
 #Javscript Build
+alias is="npm i && npm run serve"
 alias js-reset="rm -rf node_modules/ && npm i && js dev && js hot:ops"
 alias js-hot="npm run hot:ops"
 alias js-watch="npm run watch"
 alias tw="js test:watch"
-
-alias is="npm i && npm run serve"
-alias webwatch="nvm use 10.8.0 && iw"
-alias fpd-sh="fpdock && ./scripts/docker.sh up"
 
 #Jekyll
 alias jserve="bundle exec jekyll serve"
@@ -39,21 +36,10 @@ alias jan="cd ~/code/jerrikneri"
 alias sb-j="cd ~/code/sandbox/jeopardy"
 alias jeopardy="sb-j && npm run serve"
 
-alias slive="cd ~/code/sendlane/sendlane"
-alias secom="cd ~/code/sendlane/sendlane-ecom"
-
-alias fpdock="cd ~/code/bizops-docker"
-alias fpweb="cd ~/code/fashionphile/web-app"
-alias fpcore="cd ~/code/fashionphile/core-api"
-alias fpfe="cd ~/code/fashionphile/admin-frontend"
-alias fpnm="cd ~/code/fashionphile/nm-portal"
-alias fpsty="cd ~/code/fashionphile/stylist"
-
-
 #Config
 alias refrash="zsrc && vsrc"
 alias zsrc="source ~/.zshrc"
-alias vsrc="source ~/Config/.vimrc"
+alias vsrc="cp ~/Config/.vimrc ~/.vimrc"
 alias cfg="cd ~/Config"
 alias zfg="vim ~/.zshrc"
 alias vfg="vim ~/Config/.vimrc"
@@ -66,12 +52,6 @@ alias qmk="cd ~/Keyboard/QMK"
 
 #SSH
 alias sshme="ssh $JAN"
-alias slvpn="ssh jerrikneri@$SL_IP"
-alias sldev="ssh sendlane@$SL_DEV"
-alias slprod="ssh targetly@$SL_PROD"
-alias slecom="ssh ecom@$SL_ECOM"
-alias sltrack="ssh targetly@$SL_TRACK"
-alias sljump="ssh jump@jump.sendlane.io"
 
 #Laravel
 alias art="php artisan"
@@ -83,8 +63,6 @@ alias migrate-test="DB_DATABASE=test migrate-main"
 alias migrate-deliverability="php artisan migrate --database=deliverability --path=database/migrations/deliverability"
 alias route="php artisan route:list | grep -i"
 alias tinker="php artisan tinker"
-alias staging="php artisan staging-hosts:api list"
-
 
 #PHPUnit
 alias pucc="phpunit --coverage-html ./public/coverage"
@@ -94,7 +72,7 @@ alias docker-format="docker ps --format $FORMAT"
 
 
 #Supervisor
-alias supervisor-path="/Users/jerrikneri/code/supervisor/supervisord.conf"
+alias supervisor-path="~/code/supervisor/supervisord.conf"
 alias svd="supervisord -c /usr/local/etc/supervisor.d/supervisord.conf"
 alias svc="supervisorctl -c /usr/local/etc/supervisor.d/supervisord.conf"
 
