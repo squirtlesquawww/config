@@ -8,6 +8,7 @@ alias fpsty="cd ~/code/fashionphile/stylist"
 
 # JS Build
 alias webwatch="nvm use 10.8.0 && iw"
+alias adaserve="nvm use 14 && is"
 
 # Staging
 alias staging="php artisan staging-hosts:api list"
