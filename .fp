@@ -1,4 +1,5 @@
 # Navigation
+alias fpag="cd ~/code/fashionphile/api-gateway"
 alias fpdock="cd ~/code/bizops-docker"
 alias fpweb="cd ~/code/fashionphile/web-app"
 alias fpcore="cd ~/code/fashionphile/core-api"
