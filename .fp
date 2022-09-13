@@ -43,3 +43,20 @@ fpd() {
     fpdock && ./scripts/docker.sh $1
   fi
 }
+
+buildjs () {
+	if [ -z "$1" ]
+	then
+		echo "Specify repo."
+	else
+		if [ "$1" = "web" ]
+    then
+      nvm use 10.8.0 && npm i && npm run watch
+    elif [ "$1" = "ada" ]
+    then
+      nvm use 14 && npm i && npm run serve
+    else
+      echo "Invalid repo."
+    fi
+	fi
+  }
