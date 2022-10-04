@@ -44,12 +44,6 @@ alias cfg="cd ~/Config"
 alias zfg="vim ~/.zshrc"
 alias vfg="vim ~/Config/.vimrc"
 
-
-#Keyboard
-alias qmk="cd ~/Keyboard/QMK"
-
-
-
 #SSH
 alias sshme="ssh $JAN"
 
