@@ -38,11 +38,11 @@ id() {
 
 #Keyboard
 build() {
-	 qmk && make $1/$2:$1-grid-JERRIK:dfu
+	 cqmk && make $1/$2:$1-grid-JERRIK:dfu
 }
 kb() {
    if [ $1 = "hhkb" ]; then
-    qmk && cd keyboards/$1/keymaps/$1-JERRIK
+    cqmk && cd keyboards/$1/keymaps/$1-JERRIK
    else
 	  cd ~/Keyboard/QMK/keyboards/$1/keymaps/$1-grid-JERRIK
    fi

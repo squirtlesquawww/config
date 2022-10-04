@@ -56,7 +56,7 @@ alias vfg="vim ~/Config/.vimrc"
 
 
 #Keyboard
-alias qmk="cd ~/Keyboard/QMK"
+alias cqmk="cd ~/Keyboard/QMK"
 
 
 
