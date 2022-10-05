@@ -36,18 +36,6 @@ id() {
   fi
 }
 
-#Keyboard
-build() {
-	 cqmk && make $1/$2:$1-grid-JERRIK:dfu
-}
-kb() {
-   if [ $1 = "hhkb" ]; then
-    cqmk && cd keyboards/$1/keymaps/$1-JERRIK
-   else
-	  cd ~/Keyboard/QMK/keyboards/$1/keymaps/$1-grid-JERRIK
-   fi
-}
-
 #Laravel
 ca() {
   art cache:clear && art config:clear && cda
