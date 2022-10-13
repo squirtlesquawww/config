@@ -30,26 +30,11 @@ alias jserve="bundle exec jekyll serve"
 #Directories
 alias c="cd ~/code"
 alias la="ls -al"
-<<<<<<< HEAD
 alias cfg="cd ~/Config"
-=======
-
-alias jan="cd ~/code/jerrikneri"
-
-alias sb-j="cd ~/code/sandbox/jeopardy"
-alias jeopardy="sb-j && npm run serve"
->>>>>>> 59d8c491d69c0f6972faba0bd808cc954536c1bb
 
 #Config
 alias refrash="zsrc"
 alias zsrc="source ~/.zshrc"
-<<<<<<< HEAD
-
-
-#Keyboard
-alias qmk="cd ~/Keyboard/QMK"
-
-=======
 alias vsrc="cp ~/Config/.vimrc ~/.vimrc"
 alias cfg="cd ~/Config"
 alias zfg="vim ~/.zshrc"
@@ -57,7 +42,6 @@ alias vfg="vim ~/Config/.vimrc"
 
 #SSH
 alias sshme="ssh $JAN"
->>>>>>> 59d8c491d69c0f6972faba0bd808cc954536c1bb
 
 #Laravel
 alias art="php artisan"
@@ -76,9 +60,6 @@ alias pucc="phpunit --coverage-html ./public/coverage"
 #Docker
 alias docker-format="docker ps --format $FORMAT"
 
-<<<<<<< HEAD
-=======
-
 #Supervisor
 alias supervisor-path="~/code/supervisor/supervisord.conf"
 alias svd="supervisord -c /usr/local/etc/supervisor.d/supervisord.conf"
@@ -90,5 +71,3 @@ alias h-check="ping $HOME_SERVER_IP"
 alias h-luks="ssh -o \"HostKeyAlgorithms ssh-rsa\" -p $HOME_SERVER_PORT root@$HOME_SERVER_IP"
 alias h-ssh="ssh jerrik@$HOME_SERVER_IP -p $HOME_SERVER_SSH_PORT"
 alias h-wake="wakeonlan -i 192.168.1.255 -p 7 $HOME_SERVER_MAC"
-
->>>>>>> 59d8c491d69c0f6972faba0bd808cc954536c1bb
