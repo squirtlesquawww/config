@@ -6,3 +6,4 @@ source ~/Config/.format
 
 source ~/Config/.fp
 source ~/Config/.kb
+source ~/Config/.wsl
