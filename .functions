@@ -36,22 +36,11 @@ id() {
   fi
 }
 
-#Keyboard
-build() {
-	 qmk && make $1/$2:$1-grid-JERRIK:dfu
-}
-kb() {
-   if [ $1 = "hhkb" ]; then
-    qmk && cd keyboards/$1/keymaps/$1-JERRIK
-   else
-	  cd ~/Keyboard/QMK/keyboards/$1/keymaps/$1-grid-JERRIK
-   fi
-}
-
 #Laravel
 ca() {
   art cache:clear && art config:clear && cda
  }
+
 migrate-tenant() {
   if [ -z "$1" ]
   then
@@ -60,9 +49,11 @@ migrate-tenant() {
     php artisan migrate:tenants --tenantdb=$1
   fi
 }
+
 m-sl() {
   migrate-main && migrate-test && art migrate:tenants && migrate-deliverability
 }
+
 pu() {
   if [ -z "$1" ]
   then
@@ -71,14 +62,3 @@ pu() {
     phpunit --filter $1
   fi
 }
-
-#SSH
-sshslj() {
-  if [ -z "$1" ]
-  then
-    ssh $SLJUMP
-  else
-    ssh -At $SLJUMP "ssh -At $1"
-  fi
-}
-

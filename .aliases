@@ -7,9 +7,10 @@ alias stop="killall yes"
 alias gs="git status"
 alias gl="git log"
 alias gpom="git pull origin main"
+alias gpoms="git pull origin master"
 alias ga="git add"
 alias gaa="git add ."
-alias gc="git commit -m"
+alias gc="git commit -S -m"
 alias gps="git push"
 alias gpl="git pull"
 alias gd="git diff"
@@ -17,6 +18,7 @@ alias gf="git fetch"
 alias gclb="git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done"
 
 #Javscript Build
+alias is="npm i && npm run serve"
 alias js-reset="rm -rf node_modules/ && npm i && js dev && js hot:ops"
 alias js-hot="npm run hot:ops"
 alias js-watch="npm run watch"
@@ -28,16 +30,34 @@ alias jserve="bundle exec jekyll serve"
 #Directories
 alias c="cd ~/code"
 alias la="ls -al"
+<<<<<<< HEAD
 alias cfg="cd ~/Config"
+=======
+
+alias jan="cd ~/code/jerrikneri"
+
+alias sb-j="cd ~/code/sandbox/jeopardy"
+alias jeopardy="sb-j && npm run serve"
+>>>>>>> 59d8c491d69c0f6972faba0bd808cc954536c1bb
 
 #Config
 alias refrash="zsrc"
 alias zsrc="source ~/.zshrc"
+<<<<<<< HEAD
 
 
 #Keyboard
 alias qmk="cd ~/Keyboard/QMK"
 
+=======
+alias vsrc="cp ~/Config/.vimrc ~/.vimrc"
+alias cfg="cd ~/Config"
+alias zfg="vim ~/.zshrc"
+alias vfg="vim ~/Config/.vimrc"
+
+#SSH
+alias sshme="ssh $JAN"
+>>>>>>> 59d8c491d69c0f6972faba0bd808cc954536c1bb
 
 #Laravel
 alias art="php artisan"
@@ -47,10 +67,8 @@ alias cda="composer dumpautoload"
 alias migrate-main="php artisan migrate --path=database/migrations/main"
 alias migrate-test="DB_DATABASE=test migrate-main"
 alias migrate-deliverability="php artisan migrate --database=deliverability --path=database/migrations/deliverability"
-alias route="php artisan route:list | grep "
+alias route="php artisan route:list | grep -i"
 alias tinker="php artisan tinker"
-alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
-
 
 #PHPUnit
 alias pucc="phpunit --coverage-html ./public/coverage"
@@ -58,3 +76,19 @@ alias pucc="phpunit --coverage-html ./public/coverage"
 #Docker
 alias docker-format="docker ps --format $FORMAT"
 
+<<<<<<< HEAD
+=======
+
+#Supervisor
+alias supervisor-path="~/code/supervisor/supervisord.conf"
+alias svd="supervisord -c /usr/local/etc/supervisor.d/supervisord.conf"
+alias svc="supervisorctl -c /usr/local/etc/supervisor.d/supervisord.conf"
+
+
+#Home Server
+alias h-check="ping $HOME_SERVER_IP"
+alias h-luks="ssh -o \"HostKeyAlgorithms ssh-rsa\" -p $HOME_SERVER_PORT root@$HOME_SERVER_IP"
+alias h-ssh="ssh jerrik@$HOME_SERVER_IP -p $HOME_SERVER_SSH_PORT"
+alias h-wake="wakeonlan -i 192.168.1.255 -p 7 $HOME_SERVER_MAC"
+
+>>>>>>> 59d8c491d69c0f6972faba0bd808cc954536c1bb
