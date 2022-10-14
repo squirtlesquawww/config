@@ -38,7 +38,7 @@ id() {
 
 #Laravel
 ca() {
-  art cache:clear && art config:clear && cda
+  art cache:clear && art config:clear && art clear-compiled && cda
  }
 
 migrate-tenant() {
