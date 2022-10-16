@@ -1,1 +1,3 @@
+# Laravel Blog
 alias jn="cd ~/code/jerrikneri"
+alias jnup="sqlstart && jn && php artisan serve --host=jerrikneri.local --port=8080 --env=.env"
